@@ -1,10 +1,7 @@
-module.exports = { 
-    dialect: 'postgre',
-    host: 'localhost',
-    username: 'postgres',
-    password:'123456',
-    database: 'sqlmode',
-    define:{
-        timestamps: true,
-    }
-}
+const Sequelize = require('sequelize');
+const dbConfig = require('../config/database');
+
+const connection = new Sequelize(dbConfig);
+
+
+module.exports = connection;
