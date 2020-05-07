@@ -25,4 +25,4 @@ Projeto de API Backend utilizando NodeJs e Banco de Dados PostgreSQL.
  * cors
 
   ---
- Made by 💙 by [Henrique Barbosa de Souza Júnior](https://github.com/HenriqueBarbosaSJr)
+ Made com 💙 by [Henrique Barbosa de Souza Júnior](https://github.com/HenriqueBarbosaSJr)
