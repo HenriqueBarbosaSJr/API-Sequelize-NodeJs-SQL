@@ -12,6 +12,12 @@ class User extends Model{
             sequelize
         })
     }
+
+    static associate(models){
+        // hasMany informa que o uses tem muitos endereços 
+        this.hasMany(models.Address, { foreignKey: 'user_id', as: 'addresses' });
+    
+     }
 }
 
 module.exports = User;

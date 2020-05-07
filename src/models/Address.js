@@ -15,6 +15,7 @@ class Address extends Model{
         }
 
         static associate(models){
+            // belongsTo informa que o endereço possui um usuário
             this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
         
          }

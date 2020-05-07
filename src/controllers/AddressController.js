@@ -2,6 +2,20 @@ const User = require('../models/User');
 const Address = require('../models/Address');
 
 module.exports = {
+    async index(req, res){
+        const { user_id } = req.params;
+
+        const user = await User.findByPk(user_id, {
+            include: { association: 'addresses' }
+        });
+
+        /* Retorna o dados do usuário e todos os seus endereços
+           para retornar somente os endereços utilizo
+           return res.json(user.addresses);
+           */
+        return res.json(user);
+    },
+
     async store(req, res){
         const { user_id } = req.params;
         const { zipcode, street, number } = req.body;
