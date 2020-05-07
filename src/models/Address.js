@@ -8,11 +8,16 @@ class Address extends Model{
             zipcode: DataTypes.STRING,
             street: DataTypes.STRING,
             number: DataTypes.INTEGER,
-        },
-        {   // conexão com o banco
-            sequelize
-        })
-    }
+            },
+            {   // conexão com o banco
+                sequelize
+            })
+        }
+
+        static associate(models){
+            this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
+        
+         }
 }
 
 module.exports = Address;
