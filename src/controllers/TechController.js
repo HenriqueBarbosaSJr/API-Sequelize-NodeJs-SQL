@@ -17,7 +17,7 @@ module.exports = {
             include: { association: 'techs',
                        attributes:['name'],  // filtra somente o name
                        through:{             // Associa a tabela de relacionamento
-                          attributes:[]      // Quando é passado o o couchetes vazio exclui todos os atributos
+                          attributes:[]      // Quando é passado o o colchetes vazio exclui todos os atributos
                        }    
                     }
             });
