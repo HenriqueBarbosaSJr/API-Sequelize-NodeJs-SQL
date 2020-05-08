@@ -13,5 +13,6 @@ routes.post('/users/:user_id/addresses', AddressController.store );
 
 routes.get('/users/:user_id/techs', TechControllers.index );
 routes.post('/users/:user_id/techs', TechControllers.store );
+routes.delete('/users/:user_id/techs', TechControllers.delete );
 
 module.exports = routes;
