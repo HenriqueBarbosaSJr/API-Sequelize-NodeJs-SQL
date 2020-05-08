@@ -4,7 +4,25 @@ const Tech = require('../models/Tech');
 
 module.exports = {
     async index(req, res){
-        
+        const { user_id } = req.params;
+
+        /* Exemplo que inclui a listagem de todos os campos da tabela tecnologia
+           mais a tabela de relacionamento.
+
+            const user = await User.findByPk(user_id, {
+            include: { association: 'techs'}
+            });
+        */
+        const user = await User.findByPk(user_id, {
+            include: { association: 'techs',
+                       attributes:['name'],  // filtra somente o name
+                       through:{             // Associa a tabela de relacionamento
+                          attributes:[]      // Quando é passado o o couchetes vazio exclui todos os atributos
+                       }    
+                    }
+            });
+
+        return res.json(user.techs);
     },
 
     async store(req, res){
@@ -26,6 +44,7 @@ module.exports = {
 
         return res.json(tech);
     },
+    // Método que deleta o relacionamento Tech e não a tecnologia.
     async delete(req, res){
         const { user_id } = req.params;
         const { name } = req = req.body;
