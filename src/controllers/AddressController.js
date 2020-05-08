@@ -4,7 +4,10 @@ const Address = require('../models/Address');
 module.exports = {
     async index(req, res){
         const { user_id } = req.params;
-
+        /* Quando é feito uma busca utilizando o findByPk ele 
+           a busca recebe um segundo valor que pode ser a associação
+           con outra tabela.
+         */
         const user = await User.findByPk(user_id, {
             include: { association: 'addresses' }
         });

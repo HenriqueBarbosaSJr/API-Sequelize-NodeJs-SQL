@@ -9,14 +9,16 @@ class User extends Model{
             email: DataTypes.STRING,
         },
         {   // conexão com o banco
-            sequelize
+            sequelize,
+        
         })
     }
 
     static associate(models){
         // hasMany informa que o uses tem muitos endereços 
         this.hasMany(models.Address, { foreignKey: 'user_id', as: 'addresses' });
-    
+        //
+        this.belongsToMany(models.Tech, { foreignKey: 'user_id', through: 'user_techs', as: 'techs'});
      }
 }
 
