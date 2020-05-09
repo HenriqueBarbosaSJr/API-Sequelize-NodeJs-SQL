@@ -9,6 +9,8 @@ Projeto de API Backend utilizando NodeJs e Banco de Dados PostgreSQL.
   Criação de rotas para inclusão, consulta de deleção de dados em tabelas com relacionamento.
 
   Métodos: POST , GET e DELETE
+
+  Rotas: utilizando opereadores para buscas utilizando linguagem SQL.
  
   API EM DESENVOLVIMENTO
 
