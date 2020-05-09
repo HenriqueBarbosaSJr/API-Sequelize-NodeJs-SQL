@@ -24,6 +24,14 @@ module.exports = {
                     association: 'addresses', 
                     where: { street:'Vila' } 
                 },
+                {
+                    association: 'techs',
+                    where:{
+                        name:{
+                            [Op.iLike]:'react%'
+                        }
+                    }
+                },
             
         ]
         });
