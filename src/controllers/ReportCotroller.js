@@ -19,6 +19,13 @@ module.exports = {
                     [Op.iLike]: '%@gmail.com%'
                 }
             },
+            include:[
+                { 
+                    association: 'addresses', 
+                    where: { street:'Vila' } 
+                },
+            
+        ]
         });
 
         return res.json(users);
