@@ -26,6 +26,9 @@ module.exports = {
                 },
                 {
                     association: 'techs',
+                    
+                    // O require deixa como opcional ter ou não a tecnologia buscada.
+                    required: false,
                     where:{
                         name:{
                             [Op.iLike]:'react%'
