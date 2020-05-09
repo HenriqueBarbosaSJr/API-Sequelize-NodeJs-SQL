@@ -10,7 +10,7 @@ Projeto de API Backend utilizando NodeJs e Banco de Dados PostgreSQL.
 
   Métodos: POST , GET e DELETE
 
-  Rotas: utilizando opereadores para buscas utilizando linguagem SQL.
+  Rotas: utilizando opereadores para buscas em linguagem SQL.
  
   API EM DESENVOLVIMENTO
 
